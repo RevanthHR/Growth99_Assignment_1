@@ -1,0 +1,188 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #333;
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+header .logo img {
+    width: 80px;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-menu ul li {
+    margin: 0 1em;
+}
+
+.nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: url('../assets/hero.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 4em 1em;
+}
+
+.hero h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: black;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: rgb(65, 27, 27);
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 2em 1em;
+}
+
+.service {
+    flex: 1 1 300px;
+    padding: 1em;
+    text-align: center;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service .icon {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #333;
+    color: #fff;
+    padding: 1.5em;
+    text-align: center;
+}
+
+footer .footer-section {
+    flex: 1 1 200px;
+    margin: 0.5em 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Collapse Nav Menu */
+    .nav-menu ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-menu ul.show {
+        display: flex;
+        background-color: #333;
+        padding: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+        color: #fff;
+    }
+
+    /* Stack Services */
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.6em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    header .logo img {
+        width: 70px;
+    }
+}
+/* ......................... */
+
+/* Navigation Menu Styling */
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+
+.nav ul li a {
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Navigation Menu for Tablet and Mobile */
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        padding: 10px;
+    }
+
+    .nav ul.open {
+        display: flex;
+    }
+
+    .hamburger{
+        display: block;
+        font-size: 24px;
+    }
+
+}
